@@ -1,7 +1,7 @@
 /* 🎨 Estilo oscuro pastel para las páginas de actividades de Nayelin */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
+/* 🌙 PALETA DE COLORES OSCUROS SUAVES */
 :root {
   --fondo-principal: #0f0a21;
   --fondo-secundario: #201840;
@@ -10,10 +10,13 @@
   --texto-suave: #b5b0d0;
   --acento: #403863;
   --acento-secundario: #322957;
+  --boton-fondo: #52354c;
+  --boton-hover: #87607f;
   --enlace: #8f83ff;
   --enlace-hover: #b5aaff;
 }
 
+/* ===== REGLAS GENERALES ===== */
 * {
   margin: 0;
   padding: 0;
@@ -25,13 +28,15 @@ body {
   background-color: var(--fondo-principal);
   color: var(--texto-claro);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
-/* HEADER */
+/* ===== ENCABEZADO ===== */
 .site-header {
   background: var(--fondo-secundario);
   padding: 1rem 0;
   border-bottom: 1px solid var(--acento);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 .site-header.small h1 {
@@ -43,24 +48,26 @@ body {
   color: var(--enlace);
   text-decoration: none;
   font-weight: 500;
+  transition: 0.3s ease;
 }
 
 .brand-link:hover {
   color: var(--enlace-hover);
 }
 
-/* NAVEGACIÓN */
+/* ===== NAVEGACIÓN ===== */
 .mini-nav .nav-link {
   color: var(--texto-suave);
   margin-left: 1rem;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .mini-nav .nav-link:hover {
   color: var(--enlace-hover);
 }
 
-/* CONTENIDO PRINCIPAL */
+/* ===== CONTENIDO PRINCIPAL ===== */
 .wrap {
   width: 90%;
   max-width: 900px;
@@ -69,57 +76,82 @@ body {
 }
 
 h2 {
-  color: var(--enlace-hover);
-  margin-bottom: 0.5rem;
+  color: var(--boton-hover);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
 }
 
 p, li, pre, code {
   color: var(--texto-suave);
+  font-size: 1rem;
 }
 
-/* SECCIONES */
+/* ===== SECCIONES ===== */
 section {
   background: var(--fondo-terciario);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: background 0.3s ease;
 }
 
-/* ENLACES DE ARCHIVOS */
+section:hover {
+  background: var(--fondo-secundario);
+}
+
+/* ===== ENLACES DE ARCHIVOS ===== */
+ul li {
+  list-style: none;
+  margin-bottom: 0.6rem;
+}
+
 ul li a {
   color: var(--enlace);
   text-decoration: none;
+  font-weight: 500;
 }
 
 ul li a:hover {
+  color: var(--enlace-hover);
   text-decoration: underline;
 }
 
-/* BOTONES */
+/* ===== BOTONES ===== */
 .btn.ghost {
-  border: 1px solid var(--enlace);
-  color: var(--enlace);
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  transition: all 0.3s;
+  display: inline-block;
+  border: 1px solid var(--boton-hover);
+  color: var(--boton-hover);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background-color: transparent;
 }
 
 .btn.ghost:hover {
-  background: var(--enlace);
+  background: var(--boton-hover);
   color: var(--fondo-principal);
+  box-shadow: 0 0 10px rgba(255,255,255,0.15);
 }
 
-/* CÓDIGO */
+/* ===== BLOQUES DE CÓDIGO ===== */
 pre {
   background: var(--acento-secundario);
   color: var(--texto-claro);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow-x: auto;
+  font-size: 0.95rem;
 }
 
-/* FOOTER */
+code {
+  color: var(--texto-claro);
+  font-family: 'Courier New', monospace;
+}
+
+/* ===== FOOTER ===== */
 .site-footer {
   background: var(--fondo-secundario);
   text-align: center;
@@ -130,4 +162,5 @@ pre {
 .site-footer p {
   color: var(--texto-suave);
   font-size: 0.9rem;
+  letter-spacing: 0.3px;
 }
