@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unidad 1 · Actividades</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#fbf8ff;
+      --card:#fff;
+      --primary:#7c6cc7;
+      --muted:#645872;
+      --accent:#e9e0ff;
+    }
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;margin:0;background:var(--bg);color:#2b2030;padding:1.6rem}
+    header{background:linear-gradient(180deg,var(--primary),#9a87e8);color:white;padding:1.1rem;border-radius:12px}
+    header h1{margin:0;font-family:'Playfair Display',serif}
+    .container{max-width:1100px;margin:1.4rem auto;padding:0 1rem}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem}
+    .actividad{
+      background:var(--card);
+      border-radius:14px;
+      padding:1rem;
+      box-shadow:0 10px 26px rgba(32,20,50,0.06);
+      border:1px solid rgba(124,108,199,0.08);
+      transition:transform .18s, box-shadow .18s;
+      display:flex;flex-direction:column;gap:.45rem;
+    }
+    .actividad:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(32,20,50,0.10)}
+    .actividad h3{margin:0;color:var(--primary);font-size:1.05rem}
+    .meta{color:var(--muted);font-size:.88rem}
+    .tags{display:flex;gap:.3rem;flex-wrap:wrap;margin-top:.4rem}
+    .tag{background:var(--accent);padding:.28rem .5rem;border-radius:8px;font-size:.78rem;color:var(--muted)}
+    .actions{margin-top:auto;display:flex;gap:.6rem;align-items:center}
+    .btn{background:linear-gradient(180deg,var(--primary),#b39df8);color:white;padding:.55rem .85rem;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(124,108,199,0.12);color:var(--primary)}
+    .back{display:inline-block;margin-top:1rem;color:var(--primary);text-decoration:none}
+    .help{font-size:.9rem;color:var(--muted);margin-top:.8rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width:1100px;margin:0 auto;padding:0 1rem">
+      <h1>Unidad 1 · Métodos numéricos (Actividades 00–06)</h1>
+      <p style="margin:.4rem 0 0;font-size:.95rem;opacity:.95">Haz clic en "Abrir" para ver la actividad y subir evidencia.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <!-- Actividad 00 -->
+      <article class="actividad">
+        <h3>Actividad 00 · Introducción a Programación Numérica</h3>
+        <div class="meta">04/09/2025 · Definición y aplicaciones</div>
+        <div class="tags">
+          <span class="tag">Teoría</span>
+          <span class="tag">Informe</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=00">Abrir</a>
+          <a class="btn ghost" href="https://drive.google.com/file/d/1k1VK4O3_V_jAH001ZmJ_ewWoGTId91Ky/view?usp=sharing" target="_blank">Ver evidencia</a>
+        </div>
+      </article>
+
+      <!-- Actividad 01 -->
+      <article class="actividad">
+        <h3>Actividad 01 · Identificador de variables y operaciones</h3>
+        <div class="meta">10/09/2025 · Programa en Python</div>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Código</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=01">Abrir</a>
+          <a class="btn ghost" href="#">Código (local)</a>
+        </div>
+      </article>
+
+      <!-- Actividad 02 -->
+      <article class="actividad">
+        <h3>Actividad 02 · Graficadora de funciones</h3>
+        <div class="meta">17/09/2025 · Graficadora</div>
+        <div class="tags"><span class="tag">Python</span></div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=02">Abrir</a>
+          <a class="btn ghost" href="#">Ver demo</a>
+        </div>
+      </article>
+
+      <!-- Actividad 03 -->
+      <article class="actividad">
+        <h3>Actividad 03 · Restricciones</h3>
+        <div class="meta">25/09/2025 · Ejercicios</div>
+        <div class="tags"><span class="tag">Álgebra Lineal</span></div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=03">Abrir</a>
+          <a class="btn ghost" href="ACTIVIDAD_3___PROGRAMACION_NUMERICA__RESTRICCIONES_ (1).pdf" target="_blank">PDF</a>
+        </div>
+      </article>
+
+      <!-- Actividad 04 -->
+      <article class="actividad">
+        <h3>Actividad 04 · Métodos Iterativos</h3>
+        <div class="meta">02/10/2025 · Bisección</div>
+        <div class="tags"><span class="tag">Métodos</span><span class="tag">Grupal</span></div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=04">Abrir</a>
+          <a class="btn ghost" href="ACTIVIDAD 4 PROGN.pdf" target="_blank">Documento</a>
+        </div>
+      </article>
+
+      <!-- Actividad 05 -->
+      <article class="actividad">
+        <h3>Actividad 05 · Método Newton-Raphson</h3>
+        <div class="meta">09/10/2025 · Resolución en Python</div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Reporte</span></div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=05">Abrir</a>
+          <a class="btn ghost" href="ACTIVIDAD 5.py" target="_blank">Código</a>
+        </div>
+      </article>
+
+      <!-- Actividad 06 -->
+      <article class="actividad">
+        <h3>Actividad 06 · Integración numérica</h3>
+        <div class="meta">16/10/2025 · Trapecio y Simpson</div>
+        <div class="tags"><span class="tag">Integración</span></div>
+        <div class="actions">
+          <a class="btn" href="actividad.html?id=06">Abrir</a>
+          <a class="btn ghost" href="#">Plantilla</a>
+        </div>
+      </article>
+    </div>
+
+    <a href="index.html" class="back">← Volver al inicio</a>
+    <p class="help">Puedes añadir más evidencias dentro de cada actividad (archivo o enlace). Los archivos quedan guardados en tu navegador (localStorage).</p>
+  </main>
+</body>
+</html>
