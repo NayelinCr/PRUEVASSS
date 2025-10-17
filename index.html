@@ -3,43 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTAFOLIO – PRGRAMACION NUMERICA- NAYELIN </title>
+  <title>PORTAFOLIO – PROGRAMACIÓN NUMÉRICA – NAYELIN</title>
   <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* ======= ESTILO OSCURO PROFESIONAL ======= */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0a21, #201840, #322957);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header.hero {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      padding: 4rem 1rem;
+    }
+
+    /* LOGOS A LOS LADOS DEL TÍTULO */
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto 2rem;
+    }
+
+    .logos img {
+      height: 80px;
+      width: auto;
+      filter: brightness(0.9);
+      transition: transform 0.3s ease;
+    }
+
+    .logos img:hover {
+      transform: scale(1.05);
+    }
+
+    .content h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .content h2 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    /* BURBUJAS DE INFORMACIÓN */
+    .info-bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .bubble {
+      background-color: #231f33;
+      padding: 1rem 1.5rem;
+      border-radius: 2rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      font-size: 0.95rem;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .bubble:hover {
+      background-color: #403863;
+      transform: translateY(-5px);
+    }
+
+    /* BOTONES */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      background-color: #403863;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #5a4fa3;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #201840;
+      width: 100%;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    /* BOTÓN IR ARRIBA */
+    #btnArriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #403863;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #btnArriba.mostrar {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
+
   <header class="hero">
-    <div class="overlay"></div>
+    <div class="logos">
+      <img src="img/logo_facultad.png" alt="Logo Facultad">
+      <img src="img/logo_universidad.png" alt="Logo Universidad">
+    </div>
+
     <div class="content">
-      <h1>PROGRAMACION NUMERICA</h1>
-      <h2>PROPIO DE : NAYELIN BRISBANY CUTIPA RAMOS</h2>
+      <h1>PROGRAMACIÓN NUMÉRICA</h1>
+      <h2>PORTAFOLIO DE NAYELIN BRISBANY CUTIPA RAMOS</h2>
+
+      <div class="info-bubbles">
+        <div class="bubble">📘 Curso: Programación Numérica</div>
+        <div class="bubble">👩‍🏫 Docente: [Nombre del Docente]</div>
+        <div class="bubble">🎓 Facultad: Ingeniería Estadística e Informática</div>
+        <div class="bubble">📅 Semestre: 2025-II</div>
+        <div class="bubble">🏫 Universidad Nacional del Altiplano – Puno</div>
+      </div>
+
       <div class="buttons">
         <a href="unidad1.html" class="btn">UNIDAD 1</a>
         <a href="unidad2.html" class="btn">UNIDAD 2</a>
       </div>
     </div>
   </header>
-  <footer>
-    <p>© 2025 NAYELIN BRISBANY CUTIPA RAMOS | PORTAFOLIO </p>
-  </footer>
-  <script src="js/main.js"></script>
-  
- <button id="btnArriba" title="Volver arriba">⬆</button>
-<script src="js/main.js"></script>
-<script>
-  const btnArriba = document.getElementById("btnArriba");
-  window.onscroll = function() {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      btnArriba.classList.add("mostrar");
-    } else {
-      btnArriba.classList.remove("mostrar");
-    }
-  };
-  btnArriba.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-</script>
 
+  <footer>
+    <p>© 2025 NAYELIN BRISBANY CUTIPA RAMOS | PORTAFOLIO</p>
+  </footer>
+
+  <button id="btnArriba" title="Volver arriba">⬆</button>
+
+  <script>
+    const btnArriba = document.getElementById("btnArriba");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btnArriba.classList.add("mostrar");
+      } else {
+        btnArriba.classList.remove("mostrar");
+      }
+    };
+    btnArriba.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 
 </body>
 </html>
+
 
