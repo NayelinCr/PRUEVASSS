@@ -24,38 +24,21 @@
   <script src="js/main.js"></script>
   
  <button id="btnArriba" title="Volver arriba">⬆</button>
-
 <script src="js/main.js"></script>
 <script>
-const btnArriba = document.getElementById("btnArriba");
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btnArriba.classList.add("mostrar");
-  } else {
-    btnArriba.classList.remove("mostrar");
-  }
-};
-btnArriba.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  const btnArriba = document.getElementById("btnArriba");
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      btnArriba.classList.add("mostrar");
+    } else {
+      btnArriba.classList.remove("mostrar");
+    }
+  };
+  btnArriba.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 </script>
-<!-- Botón para volver arriba -->
-<button id="btnArriba" title="Volver arriba">↑</button>
-<script>
-const btnArriba = document.getElementById("btnArriba");
 
-window.onscroll = function() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    btnArriba.classList.add("mostrar");
-  } else {
-    btnArriba.classList.remove("mostrar");
-  }
-};
-
-btnArriba.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
 
 </body>
 </html>
