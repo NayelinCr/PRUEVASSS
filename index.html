@@ -22,14 +22,12 @@
     <p>© 2025 NAYELIN BRISBANY CUTIPA RAMOS | PORTAFOLIO </p>
   </footer>
   <script src="js/main.js"></script>
-  <!-- Botón para volver al inicio -->
-<button id="btnArriba" title="Volver arriba">⬆</button>
-<!-- Botón para volver al inicio -->
-<button id="btnArriba" title="Volver arriba">⬆</button>
+  
+ <button id="btnArriba" title="Volver arriba">⬆</button>
 
+<script src="js/main.js"></script>
 <script>
 const btnArriba = document.getElementById("btnArriba");
-
 window.onscroll = function() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     btnArriba.classList.add("mostrar");
@@ -37,11 +35,11 @@ window.onscroll = function() {
     btnArriba.classList.remove("mostrar");
   }
 };
-
 btnArriba.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
+
 </body>
 </html>
 
