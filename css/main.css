@@ -6,17 +6,19 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
+/* Fondo general */
 body {
   background: linear-gradient(135deg, #f9e3ff, #e3baff, #d8b8f6);
   color: #4b0082;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
+/* ===== HERO PRINCIPAL ===== */
 .hero {
   position: relative;
   height: 100vh;
@@ -48,16 +50,23 @@ h1 {
   margin-bottom: 10px;
 }
 
+h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
+  font-size: 1.1rem;
   font-weight: 300;
+  margin-bottom: 25px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -68,29 +77,28 @@ p {
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .btn:hover {
   background: #d8b8f6;
-  transform: scale(1.1);
-  box-shadow: 0px 0px 10px #f0b3ff;
+  transform: scale(1.08);
+  box-shadow: 0px 0px 12px #f0b3ff;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  background: #f7eaff;
-  color: #5c2a9d;
-}
+/* ===== MENÚ DE UNIDADES ===== */
 .menu {
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px 100px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(245,225,255,0.9));
+  flex: 1;
 }
 
 .menu h2 {
   color: #6a0dad;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
 .menu ul {
@@ -98,20 +106,61 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
+  margin-bottom: 60px; /* 👈 separa las burbujas del botón de volver */
 }
 
 .menu a {
   background: #fff;
   color: #6a0dad;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 12px 22px;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
+  transition: all 0.3s;
+  box-shadow: 0px 4px 12px rgba(106,13,173,0.15);
 }
 
 .menu a:hover {
   background: #e8c8ff;
-  transform: scale(1.05);
+  transform: scale(1.07);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: #f7eaff;
+  color: #5c2a9d;
+  border-top: 1px solid rgba(90,0,150,0.1);
+}
+
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+#btnArriba {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 100;
+  background: linear-gradient(135deg, #8a2be2, #d08aff);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 14px 17px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#btnArriba:hover {
+  transform: scale(1.15);
+  background: linear-gradient(135deg, #d08aff, #8a2be2);
+}
+
+#btnArriba.mostrar {
+  opacity: 1;
+  pointer-events: auto;
 }
