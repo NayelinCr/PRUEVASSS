@@ -164,3 +164,34 @@ footer {
   opacity: 1;
   pointer-events: auto;
 }
+/* Botón flotante para volver arriba */
+#btnArriba {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background-color: #0078ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+/* Cuando se muestra el botón */
+#btnArriba.mostrar {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efecto al pasar el mouse */
+#btnArriba:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
