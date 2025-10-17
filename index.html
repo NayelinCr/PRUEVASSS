@@ -13,10 +13,22 @@
       background: linear-gradient(135deg, #0f0a21, #201840, #322957);
       color: #fff;
       min-height: 100vh;
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      overflow-x: hidden;
+    }
+
+    /* CAPA TRANSLÚCIDA LILA SOBRE TODO EL FONDO */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(128, 96, 185, 0.25); /* velo moradito translúcido */
+      backdrop-filter: blur(6px);
+      z-index: 0;
     }
 
     header.hero {
@@ -24,6 +36,7 @@
       text-align: center;
       width: 100%;
       padding: 4rem 1rem;
+      z-index: 1;
     }
 
     /* LOGOS A LOS LADOS DEL TÍTULO */
@@ -38,25 +51,27 @@
     .logos img {
       height: 80px;
       width: auto;
-      filter: brightness(0.9);
-      transition: transform 0.3s ease;
+      filter: brightness(0.95);
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .logos img:hover {
       transform: scale(1.05);
+      filter: brightness(1.1);
     }
 
     .content h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #fff;
       letter-spacing: 1px;
       margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(255,255,255,0.15);
     }
 
     .content h2 {
       font-weight: 400;
-      font-size: 1.2rem;
-      color: #ccc;
+      font-size: 1.1rem;
+      color: #d6d4e0;
       margin-bottom: 2rem;
     }
 
@@ -66,52 +81,59 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     .bubble {
-      background-color: #231f33;
+      background-color: rgba(50, 41, 87, 0.65);
       padding: 1rem 1.5rem;
       border-radius: 2rem;
-      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      box-shadow: 0 0 12px rgba(255,255,255,0.05);
       font-size: 0.95rem;
       transition: background 0.3s ease, transform 0.3s ease;
+      backdrop-filter: blur(4px);
     }
 
     .bubble:hover {
-      background-color: #403863;
-      transform: translateY(-5px);
+      background-color: rgba(88, 70, 150, 0.75);
+      transform: translateY(-4px);
     }
 
     /* BOTONES */
     .buttons {
       display: flex;
       justify-content: center;
-      gap: 1rem;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     .btn {
-      background-color: #403863;
+      background: linear-gradient(135deg, rgba(88, 70, 150, 0.95), rgba(139, 124, 255, 0.95));
       color: #fff;
       text-decoration: none;
-      padding: 0.8rem 1.8rem;
-      border-radius: 2rem;
-      font-weight: 500;
-      transition: background 0.3s ease, transform 0.3s ease;
+      padding: 1.2rem 2.8rem; /* 🔹 Más grandes */
+      border-radius: 2.8rem;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 0 25px rgba(139, 124, 255, 0.25);
     }
 
     .btn:hover {
-      background-color: #5a4fa3;
-      transform: scale(1.05);
+      background: linear-gradient(135deg, rgba(139, 124, 255, 1), rgba(176, 143, 255, 1));
+      transform: scale(1.1);
+      box-shadow: 0 0 35px rgba(176, 143, 255, 0.4);
     }
 
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #201840;
+      background-color: rgba(35, 31, 51, 0.8);
       width: 100%;
       font-size: 0.9rem;
-      color: #bbb;
+      color: #cfcde0;
+      z-index: 1;
     }
 
     /* BOTÓN IR ARRIBA */
@@ -119,16 +141,18 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #403863;
+      background-color: rgba(88, 70, 150, 0.9);
       color: #fff;
       border: none;
       border-radius: 50%;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
       font-size: 1.2rem;
       cursor: pointer;
       opacity: 0;
       transition: opacity 0.3s ease;
+      z-index: 5;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
     #btnArriba.mostrar {
@@ -185,5 +209,4 @@
 
 </body>
 </html>
-
 
