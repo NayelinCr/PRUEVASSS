@@ -1,166 +1,56 @@
-/* 🎨 Estilo oscuro pastel para las páginas de actividades de Nayelin */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Unidad 1 · Actividad 00</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header small">
+    <div class="wrap header-row">
+      <div>
+        <a class="brand-link" href="unidad1.html">← Unidad 1</a>
+        <h1 class="brand">Actividad 00 · Introducción</h1>
+        <p class="subtitle">04/09/2025</p>
+      </div>
+      <nav class="mini-nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="unidad1.html" class="nav-link">Volver a Unidad 1</a>
+      </nav>
+    </div>
+  </header>
 
-/* 🌙 PALETA DE COLORES OSCUROS SUAVES */
-:root {
-  --fondo-principal: #0f0a21;
-  --fondo-secundario: #201840;
-  --fondo-terciario: #231f33;
-  --texto-claro: #e5e5f0;
-  --texto-suave: #b5b0d0;
-  --acento: #403863;
-  --acento-secundario: #322957;
-  --boton-fondo: #52354c;
-  --boton-hover: #87607f;
-  --enlace: #8f83ff;
-  --enlace-hover: #b5aaff;
-}
+  <main class="wrap actividad-detalle">
+    <section>
+      <h2>Descripción</h2>
+      <p>Aquí va la descripción de la actividad. Puedes pegar texto, imágenes, enlaces a repositorios o incrustar código.</p>
+    </section>
 
-/* ===== REGLAS GENERALES ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+    <section>
+      <h2>Evidencias</h2>
+      <ul>
+        <li><a href="assets/tareas/actividad00.pdf" target="_blank">Informe (PDF)</a></li>
+        <li><a href="assets/img/evidencia00.png" target="_blank">Imagen</a></li>
+        <li><a href="#" class="btn ghost" aria-disabled="true">Subir más archivos (pendiente)</a></li>
+      </ul>
+    </section>
 
-body {
-  background-color: var(--fondo-principal);
-  color: var(--texto-claro);
-  line-height: 1.6;
-  min-height: 100vh;
-}
+    <section>
+      <h2>Área para código / incrustaciones</h2>
+      <pre><code>// Aquí puedes pegar tu código Python / C++ / HTML
+def ejemplo():
+    print("Hola Nayelin")
+</code></pre>
+    </section>
+  </main>
 
-/* ===== ENCABEZADO ===== */
-.site-header {
-  background: var(--fondo-secundario);
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--acento);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-}
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 Nayelin · Portafolio Programación Numérica</p>
+    </div>
+  </footer>
 
-.site-header.small h1 {
-  font-size: 1.3rem;
-  color: var(--texto-claro);
-}
-
-.brand-link {
-  color: var(--enlace);
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.brand-link:hover {
-  color: var(--enlace-hover);
-}
-
-/* ===== NAVEGACIÓN ===== */
-.mini-nav .nav-link {
-  color: var(--texto-suave);
-  margin-left: 1rem;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.mini-nav .nav-link:hover {
-  color: var(--enlace-hover);
-}
-
-/* ===== CONTENIDO PRINCIPAL ===== */
-.wrap {
-  width: 90%;
-  max-width: 900px;
-  margin: auto;
-  padding: 1rem 0;
-}
-
-h2 {
-  color: var(--boton-hover);
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-p, li, pre, code {
-  color: var(--texto-suave);
-  font-size: 1rem;
-}
-
-/* ===== SECCIONES ===== */
-section {
-  background: var(--fondo-terciario);
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  transition: background 0.3s ease;
-}
-
-section:hover {
-  background: var(--fondo-secundario);
-}
-
-/* ===== ENLACES DE ARCHIVOS ===== */
-ul li {
-  list-style: none;
-  margin-bottom: 0.6rem;
-}
-
-ul li a {
-  color: var(--enlace);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-ul li a:hover {
-  color: var(--enlace-hover);
-  text-decoration: underline;
-}
-
-/* ===== BOTONES ===== */
-.btn.ghost {
-  display: inline-block;
-  border: 1px solid var(--boton-hover);
-  color: var(--boton-hover);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  background-color: transparent;
-}
-
-.btn.ghost:hover {
-  background: var(--boton-hover);
-  color: var(--fondo-principal);
-  box-shadow: 0 0 10px rgba(255,255,255,0.15);
-}
-
-/* ===== BLOQUES DE CÓDIGO ===== */
-pre {
-  background: var(--acento-secundario);
-  color: var(--texto-claro);
-  padding: 1rem;
-  border-radius: 10px;
-  overflow-x: auto;
-  font-size: 0.95rem;
-}
-
-code {
-  color: var(--texto-claro);
-  font-family: 'Courier New', monospace;
-}
-
-/* ===== FOOTER ===== */
-.site-footer {
-  background: var(--fondo-secundario);
-  text-align: center;
-  padding: 1rem;
-  border-top: 1px solid var(--acento);
-}
-
-.site-footer p {
-  color: var(--texto-suave);
-  font-size: 0.9rem;
-  letter-spacing: 0.3px;
-}
+  <script src="js/main.js"></script>
+</body>
+</html>   SI POR FAVOR
