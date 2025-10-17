@@ -83,3 +83,35 @@ footer {
   background: #f7eaff;
   color: #5c2a9d;
 }
+.menu {
+  text-align: center;
+  padding: 40px;
+}
+
+.menu h2 {
+  color: #6a0dad;
+  margin-bottom: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.menu a {
+  background: #fff;
+  color: #6a0dad;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background: #e8c8ff;
+  transform: scale(1.05);
+}
