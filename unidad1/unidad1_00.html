@@ -3,8 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Unidad 1 · Contenidos</title>
+  <title>Unidad 1 · Actividad 00</title>
+
+  <!-- Estilos principales -->
   <link rel="stylesheet" href="../css/main.css" />
+
+  <!-- Fuente bonita -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -19,6 +25,7 @@
       color: white;
       padding: 1.5rem 0;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      position: relative;
     }
 
     .wrap {
@@ -27,28 +34,76 @@
       margin: auto;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 2rem;
+    .brand-link {
+      color: white;
+      text-decoration: none;
       font-weight: 600;
     }
 
-    nav {
+    .brand-link:hover {
+      text-decoration: underline;
+    }
+
+    h1.brand {
+      margin: 0.4rem 0 0;
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+
+    p.subtitle {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* Burbujita de estado */
+    .estado {
+      position: absolute;
+      top: 1.2rem;
+      right: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      background: white;
+      color: #6b4f3b;
+      padding: 0.4rem 0.8rem;
+      border-radius: 50px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .burbuja {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ccc;
+      transition: background 0.3s;
+    }
+
+    .burbuja.completada {
+      background: #8bc34a;
+    }
+
+    .burbuja.pendiente {
+      background: #ffb74d;
+    }
+
+    nav.mini-nav {
       margin-top: 1rem;
     }
 
-    nav a {
+    nav.mini-nav a {
       background: white;
       color: #7b4b33;
       text-decoration: none;
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
       font-weight: 600;
       transition: all 0.3s ease;
       margin-right: 0.5rem;
     }
 
-    nav a:hover {
+    nav.mini-nav a:hover {
       background: #7b4b33;
       color: white;
     }
@@ -61,32 +116,46 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     }
 
+    h2 {
+      color: #7b4b33;
+      border-bottom: 2px solid #d4b59e;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
     ul {
       list-style: none;
       padding: 0;
     }
 
     li {
-      margin-bottom: 1rem;
-      padding: 1rem;
-      border: 1px solid #e3d3c4;
-      border-radius: 10px;
-      background: #f9f4f0;
-      transition: transform 0.2s;
+      margin: 0.5rem 0;
     }
 
-    li:hover {
-      transform: scale(1.02);
-    }
-
-    a.enlace-actividad {
+    a {
       color: #a66b47;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
 
-    a.enlace-actividad:hover {
+    a:hover {
       text-decoration: underline;
+    }
+
+    /* Bloque de código bonito */
+    pre {
+      background: #f7f3ef;
+      border-radius: 10px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      color: #3e2723;
+      border: 1px solid #e0d6cc;
     }
 
     footer {
@@ -103,23 +172,46 @@
 <body>
   <header>
     <div class="wrap">
-      <h1>Unidad 1 · Actividades</h1>
-      <nav>
-        <a href="../index.html">🏠 Inicio</a>
-        <a href="../unidad2/unidad2.html">➡ Unidad 2</a>
+      <a class="brand-link" href="unidad1.html">← Unidad 1</a>
+      <h1 class="brand">Actividad 00 · Introducción</h1>
+      <p class="subtitle">04/09/2025</p>
+
+      <nav class="mini-nav">
+        <a href="../index.html">Inicio</a>
+        <a href="unidad1.html">Volver a Unidad 1</a>
       </nav>
+
+      <!-- 🔵 Burbuja de estado -->
+      <div class="estado">
+        <div class="burbuja completada"></div>
+        <span>Completada</span>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
-    <ul>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_00.html">Actividad 00 · Introducción</a></li>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_01.html">Actividad 01 · Análisis de datos</a></li>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_02.html">Actividad 02 · Métodos numéricos</a></li>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_03.html">Actividad 03 · Bisección y errores</a></li>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_04.html">Actividad 04 · Newton-Raphson</a></li>
-      <li>🌸 <a class="enlace-actividad" href="unidad1_05.html">Actividad 05 · Secante</a></li>
-    </ul>
+    <section>
+      <h2>Descripción</h2>
+      <p>Esta actividad introduce los objetivos de la Unidad 1 y el uso del entorno de programación.</p>
+    </section>
+
+    <section>
+      <h2>Evidencias</h2>
+      <ul>
+        <li>📄 <a href="../assets/tareas/actividad00.pdf" target="_blank">Informe (PDF)</a></li>
+        <li>🖼️ <a href="../assets/img/evidencia00.png" target="_blank">Imagen</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Código de ejemplo</h2>
+      <pre><code># Ejemplo de código Python
+def ejemplo():
+    print("Hola Nayelin, esta es la Actividad 00 💖")
+
+ejemplo()
+</code></pre>
+    </section>
   </main>
 
   <footer>
@@ -127,4 +219,3 @@
   </footer>
 </body>
 </html>
-
