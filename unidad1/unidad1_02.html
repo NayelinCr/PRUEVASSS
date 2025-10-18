@@ -4,42 +4,336 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Unidad 1 · Actividad 00</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+
+  <style>
+    /* ======= ESTILO GENERAL ======= */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(160deg, #1f1630, #2a2037, #3c2a52);
+      color: #f0e6ff;
+      margin: 0;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ======= ENCABEZADO ======= */
+    header {
+      background: linear-gradient(135deg, #4a2e68, #7e57c2);
+      color: white;
+      padding: 1.8rem 0;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+      position: relative;
+      border-bottom: 3px solid #b388ff;
+    }
+
+    .wrap {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .brand-link {
+      color: #e9dcff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .brand-link:hover {
+      color: #d1b3ff;
+      text-decoration: underline;
+    }
+
+    h1.brand {
+      margin: 0.4rem 0 0;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    p.subtitle {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* ======= BURBUJA DE ESTADO ======= */
+    .estado {
+      position: absolute;
+      top: 1.3rem;
+      right: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      background: rgba(61, 43, 86, 0.9);
+      color: #f3e8ff;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .burbuja {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #b388ff;
+      box-shadow: 0 0 6px #b388ff;
+      transition: background 0.3s;
+    }
+
+    /* ======= NAVEGACIÓN ======= */
+    nav.mini-nav {
+      margin-top: 1rem;
+    }
+
+    nav.mini-nav a {
+      background: #3d2b56;
+      color: #e1caff;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-right: 0.6rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav.mini-nav a:hover {
+      background: #b388ff;
+      color: #2a2037;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ======= CUERPO PRINCIPAL ======= */
+    main {
+      background: rgba(56, 40, 78, 0.95);
+      padding: 2.2rem;
+      margin: 2rem auto;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(3px);
+      transition: transform 0.2s ease;
+    }
+
+    main:hover {
+      transform: scale(1.01);
+    }
+
+    h2 {
+      color: #d7baff;
+      border-bottom: 2px solid #b388ff;
+      display: inline-block;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    section {
+      margin-bottom: 2.2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 0.6rem 0;
+    }
+
+    a {
+      color: #d6b6ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #f1e0ff;
+    }
+
+    /* ======= BLOQUE DE CÓDIGO ======= */
+    pre {
+      background: #2f2043;
+      border-radius: 12px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      color: #e9ddff;
+      border: 1px solid #4e3872;
+      box-shadow: inset 0 0 6px rgba(255,255,255,0.05);
+    }
+
+    /* ======= PIE DE PÁGINA ======= */
+    footer {
+      text-align: center;
+      padding: 1.4rem 0;
+      background: #3a2951;
+      color: #e5d0ff;
+      font-size: 0.9rem;
+      border-top: 1px solid #4e3872;
+      letter-spacing: 0.4px;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
 </head>
+
 <body>
-  <header class="site-header small">
-    <div class="wrap header-row">
-      <div>
-        <a class="brand-link" href="unidad1.html">← Unidad 1</a>
-        <h1 class="brand">Actividad 00 · Introducción</h1>
-        <p class="subtitle">04/09/2025</p>
-      </div>
+  <header>
+    <div class="wrap">
+      <a class="brand-link" href="unidad1.html">← Unidad 1</a>
+      <h1 class="brand">Actividad 00 · Introducción</h1>
+      <p class="subtitle">04/09/2025</p>
+
       <nav class="mini-nav">
-        <a href="index.html" class="nav-link">Inicio</a>
-        <a href="unidad1.html" class="nav-link">Volver a Unidad 1</a>
+        <a href="../index.html">Inicio</a>
+        <a href="unidad1.html">Volver a Unidad 1</a>
       </nav>
+
+      <!-- Burbuja de estado -->
+      <div class="estado">
+        <div class="burbuja"></div>
+        <span>Completada</span>
+      </div>
     </div>
   </header>
 
-  <main class="wrap actividad-detalle">
+  <main class="wrap">
     <section>
       <h2>Descripción</h2>
-      <p>Esta actividad introduce los objetivos de la Unidad 1 y el uso del entorno de programación.</p>
+      <p>graficadora de funciones.</p>
     </section>
 
     <section>
       <h2>Evidencias</h2>
-      <ul>
-        <li><a href="assets/tareas/actividad00.pdf" target="_blank">Informe (PDF)</a></li>
-        <li><a href="assets/img/evidencia00.png" target="_blank">Imagen</a></li>
-      </ul>
+      
+    </section>
+
+    <section>
+      <h2>Código :</h2>
+      <pre><code># class Restriccion:
+    def __init__(self, expresion):
+        """
+        La expresión debe ser una función lambda con x,y.
+        Ejemplo: Restriccion(lambda x,y: x + y <= 15)
+        """
+        self.expresion = expresion
+
+    def cumple(self, x, y):
+        return self.expresion(x, y)
+
+
+class FuncionLineal:
+    def __init__(self, m, b, simbolo="*"):
+        self.m = m
+        self.b = b
+        self.simbolo = simbolo
+
+    def evaluar(self, x):
+        return round(self.m * x + self.b)
+
+
+class PlanoCartesiano:
+    def __init__(self, xmin=-1, xmax=20, ymin=-1, ymax=20):
+        self.xmin = xmin
+        self.xmax = xmax
+        self.ymin = ymin
+        self.ymax = ymax
+
+    def graficar(self, funciones, restricciones=[]):
+        for y in range(self.ymax, self.ymin - 1, -1):
+            linea = ""
+            for x in range(self.xmin, self.xmax + 1):
+                simbolo = " "
+                
+              
+                if restricciones and all(r.cumple(x, y) for r in restricciones):
+                    simbolo = "."
+
+                for f in funciones:
+                    if f.evaluar(x) == y:
+                        simbolo = f.simbolo
+
+                if x == 0 and y == 0:
+                    simbolo = "O"
+                elif x == 0 and simbolo == " ":
+                    simbolo = "|"
+                elif y == 0 and simbolo == " ":
+                    simbolo = "-"
+
+                linea += simbolo
+            print(linea)
+
+def parsear_funcion(expr):
+    """
+    Convierte 'y=-x+15' o 'y=2x+3' en (m,b).
+    """
+    expr = expr.replace(" ", "").lower()
+    if expr.startswith("y="):
+        expr = expr[2:]
+
+    if "x" in expr:
+        partes = expr.split("x")
+        m_str = partes[0]
+        b_str = partes[1] if len(partes) > 1 else "0"
+
+        if m_str in ["", "+"]:
+            m = 1
+        elif m_str == "-":
+            m = -1
+        else:
+            m = float(m_str)
+
+        b = float(b_str) if b_str != "" else 0
+    else:
+        m = 0
+        b = float(expr)
+
+    return m, b
+
+funciones = []
+restricciones = []
+
+n = int(input("¿Cuántas funciones quieres graficar? "))
+for i in range(n):
+    f_str = input(f"Ingrese función {i+1} en forma y=mx+b: ")
+    m, b = parsear_funcion(f_str)
+    funciones.append(FuncionLineal(m, b, simbolo="*"))
+
+m = int(input("¿Cuántas restricciones quieres ingresar? "))
+print("Usa 'x' y 'y'. Ejemplo: x+y<=15, x>=5, y>=0")
+for i in range(m):
+    expr = input(f"Ingrese restricción {i+1}: ")
+    try:
+        restricciones.append(Restriccion(eval(f"lambda x,y: {expr}")))
+    except:
+        print(f"Restricción inválida: {expr}. Usa operadores como <=, >=, ==, <, >")
+        exit()
+
+plano = PlanoCartesiano()
+plano.graficar(funciones, restricciones)
+ejemplo()
+</code></pre>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>© 2025 Nayelin · Portafolio Programación Numérica</p>
-    </div>
+  <footer>
+    <p>© 2025 Nayelin · Portafolio Programación Numérica 💜</p>
   </footer>
 </body>
 </html>
+
+
+
