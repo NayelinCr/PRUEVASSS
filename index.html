@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio – Programación Numérica – Nayelin</title>
+  <!-- Ruta correcta del CSS -->
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* ===== ESTILOS GENERALES ===== */
+    /* ===== ESTILOS BASE ===== */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
@@ -19,7 +20,7 @@
       margin: 0;
     }
 
-    /* ===== ENCABEZADO PRINCIPAL ===== */
+    /* ===== SECCIÓN PRINCIPAL ===== */
     .hero {
       position: relative;
       height: 100vh;
@@ -59,7 +60,7 @@
       color: #f8e9ff;
     }
 
-    /* ===== BOTONES ===== */
+    /* ===== BOTONES DE UNIDADES ===== */
     .buttons {
       margin-top: 30px;
       display: flex;
@@ -200,6 +201,7 @@
     }
   </style>
 </head>
+
 <body>
   <!-- 🌸 Encabezado principal -->
   <header class="hero">
@@ -215,13 +217,15 @@
     <div class="content">
       <h1>Programación Numérica</h1>
       <h2>Portafolio de Nayelin Brisbany Cutipa Ramos</h2>
+
+      <!-- Botones hacia las unidades -->
       <div class="buttons">
-        <a href="unidad1/index.html" class="btn">Unidad 1</a>
-        <a href="unidad2/index.html" class="btn">Unidad 2</a>
+        <a href="unidad1/unidad1.html" class="btn">Unidad 1</a>
+        <a href="unidad2/unidad2.html" class="btn">Unidad 2</a>
       </div>
     </div>
 
-    <!-- 📘 Datos académicos -->
+    <!-- 📘 Información académica -->
     <div class="info-burbujas">
       <div class="burbuja">👩‍🏫 Docente: Ing. [Nombre del Docente]</div>
       <div class="burbuja">👩‍🎓 Alumna: Nayelin Brisbany Cutipa Ramos</div>
@@ -239,14 +243,13 @@
   <!-- ⬆ Botón volver arriba -->
   <button id="btnArriba" title="Volver arriba">⬆</button>
 
-  <!-- ⚙️ Script -->
+  <!-- ⚙️ Script principal -->
   <script src="js/main.js"></script>
   <script>
     // Mostrar/ocultar botón de volver arriba
     const btnArriba = document.getElementById("btnArriba");
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 200) btnArriba.style.display = "block";
-      else btnArriba.style.display = "none";
+      btnArriba.style.display = window.scrollY > 200 ? "block" : "none";
     });
     btnArriba.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -254,5 +257,6 @@
   </script>
 </body>
 </html>
+
 
 
