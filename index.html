@@ -3,218 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PORTAFOLIO – PROGRAMACIÓN NUMÉRICA – NAYELIN</title>
-  <link rel="stylesheet" href="css/main.css">
-  <style>
-    /* ======= ESTILO OSCURO PROFESIONAL ======= */
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0f0a21, #201840, #322957);
-      color: #fff;
-      min-height: 100vh;
-      position: relative;
-      overflow-x: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    /* CAPA TRANSLÚCIDA LILA SOBRE TODO EL FONDO */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: rgba(128, 96, 185, 0.25); /* velo moradito translúcido */
-      backdrop-filter: blur(6px);
-      z-index: 0;
-    }
-
-    header.hero {
-      position: relative;
-      text-align: center;
-      padding: 5rem 1rem 3rem;
-      z-index: 1;
-    }
-
-    /* ===== LOGOS EN ESQUINAS ===== */
-    .logos {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 3rem;
-      z-index: 2;
-    }
-
-    .logos img {
-      height: 80px;
-      width: auto;
-      filter: brightness(0.95);
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-
-    .logos img:hover {
-      transform: scale(1.08);
-      filter: brightness(1.2);
-    }
-
-    .content h1 {
-      font-size: 2.8rem;
-      color: #fff;
-      letter-spacing: 1px;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 0 10px rgba(255,255,255,0.15);
-    }
-
-    .content h2 {
-      font-weight: 400;
-      font-size: 1.1rem;
-      color: #d6d4e0;
-      margin-bottom: 2rem;
-    }
-
-    /* BURBUJAS DE INFORMACIÓN */
-    .info-bubbles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-bottom: 2.5rem;
-      z-index: 2;
-    }
-
-    .bubble {
-      background-color: rgba(50, 41, 87, 0.65);
-      padding: 1rem 1.5rem;
-      border-radius: 2rem;
-      box-shadow: 0 0 12px rgba(255,255,255,0.05);
-      font-size: 0.95rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-      backdrop-filter: blur(4px);
-    }
-
-    .bubble:hover {
-      background-color: rgba(88, 70, 150, 0.75);
-      transform: translateY(-4px);
-    }
-
-    /* BOTONES */
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      z-index: 2;
-    }
-
-    .btn {
-      background: linear-gradient(135deg, rgba(88, 70, 150, 0.95), rgba(139, 124, 255, 0.95));
-      color: #fff;
-      text-decoration: none;
-      padding: 1.4rem 3.2rem; /* 🔹 Más grandes */
-      border-radius: 3rem;
-      font-weight: 600;
-      font-size: 1.3rem;
-      transition: all 0.3s ease;
-      backdrop-filter: blur(4px);
-      box-shadow: 0 0 25px rgba(139, 124, 255, 0.25);
-    }
-
-    .btn:hover {
-      background: linear-gradient(135deg, rgba(139, 124, 255, 1), rgba(176, 143, 255, 1));
-      transform: scale(1.1);
-      box-shadow: 0 0 35px rgba(176, 143, 255, 0.4);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: rgba(35, 31, 51, 0.8);
-      width: 100%;
-      font-size: 0.9rem;
-      color: #cfcde0;
-      z-index: 1;
-    }
-
-    /* BOTÓN IR ARRIBA */
-    #btnArriba {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: rgba(88, 70, 150, 0.9);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 5;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    #btnArriba.mostrar {
-      opacity: 1;
-    }
-  </style>
+  <meta name="description" content="Portafolio de Nayelin Brisbany Cutipa Ramos para el curso de Programación Numérica, Universidad Nacional del Altiplano, 2025-II">
+  <meta name="keywords" content="programación numérica, portafolio, Nayelin Cutipa, UNAP, ingeniería estadística">
+  <meta name="author" content="Nayelin Brisbany Cutipa Ramos">
+  <title>Portafolio – Programación Numérica – Nayelin</title>
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-dark.min.css" rel="stylesheet" />
 </head>
 <body>
-
-  <header class="hero">
-    <div class="logos">
-      <!-- 🔹 Logo Facultad (izquierda) -->
-      <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Facultad">
-
-      <!-- 🔹 Logo Universidad (derecha) -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo Universidad">
-    </div>
-
-    <div class="content">
-      <h1>PROGRAMACIÓN NUMÉRICA</h1>
-      <h2>PORTAFOLIO DE NAYELIN BRISBANY CUTIPA RAMOS</h2>
-
-      <div class="info-bubbles">
-        <div class="bubble">📘 Curso: Programación Numérica</div>
-        <div class="bubble">👩‍🏫 Docente: [Nombre del Docente]</div>
-        <div class="bubble">🎓 Facultad: Ingeniería Estadística e Informática</div>
-        <div class="bubble">📅 Semestre: 2025-II</div>
-        <div class="bubble">🏫 Universidad Nacional del Altiplano – Puno</div>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div>
+        <h1 class="brand">Portafolio de Nayelin</h1>
+        <p class="subtitle">Programación Numérica · 2025-II</p>
       </div>
-
-      <div class="buttons">
-        <a href="unidad1.html" class="btn">UNIDAD 1</a>
-        <a href="unidad2.html" class="btn">UNIDAD 2</a>
-      </div>
+      <nav class="mini-nav">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="unidad1.html" class="nav-link">Unidad 1</a>
+        <a href="unidad2.html" class="nav-link">Unidad 2</a>
+      </nav>
     </div>
   </header>
 
-  <footer>
-    <p>© 2025 NAYELIN BRISBANY CUTIPA RAMOS | PORTAFOLIO</p>
+  <main class="wrap">
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="logos">
+          <img src="assets/img/FinesiLogo.webp" alt="Logo Facultad" loading="lazy">
+          <img src="assets/img/Logo_UNAP.webp" alt="Logo Universidad" loading="lazy">
+        </div>
+        <h1>Programación Numérica</h1>
+        <h2>Portafolio de Nayelin Brisbany Cutipa Ramos</h2>
+        <div class="info-bubbles">
+          <div class="bubble">📘 Curso: Programación Numérica</div>
+          <div class="bubble">👩‍🏫 Docente: [Nombre del Docente]</div>
+          <div class="bubble">🎓 Facultad: Ingeniería Estadística e Informática</div>
+          <div class="bubble">📅 Semestre: 2025-II</div>
+          <div class="bubble">🏫 Universidad Nacional del Altiplano – Puno</div>
+        </div>
+        <div class="buttons">
+          <a href="unidad1.html" class="btn">Unidad 1</a>
+          <a href="unidad2.html" class="btn">Unidad 2</a>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Sobre mí</h2>
+      <p>Soy Nayelin Brisbany Cutipa Ramos, estudiante de Ingeniería Estadística e Informática en la Universidad Nacional del Altiplano. Este portafolio muestra mis proyectos y actividades en Programación Numérica.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2025 Nayelin Brisbany Cutipa Ramos | Portafolio Programación Numérica</p>
+    </div>
   </footer>
 
   <button id="btnArriba" title="Volver arriba">⬆</button>
 
-  <script>
-    const btnArriba = document.getElementById("btnArriba");
-    window.onscroll = function() {
-      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        btnArriba.classList.add("mostrar");
-      } else {
-        btnArriba.classList.remove("mostrar");
-      }
-    };
-    btnArriba.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
+  <script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </body>
 </html>
 
