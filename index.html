@@ -6,7 +6,86 @@
   <title>Portafolio – Programación Numérica – Nayelin</title>
   <link rel="stylesheet" href="css/main.css" />
   <style>
-    /* ===== LOGOS SUPERIORES ===== */
+    /* ===== ESTILOS GENERALES ===== */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background-color: #f8f3f9;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    /* ===== ENCABEZADO PRINCIPAL ===== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(rgba(100, 80, 150, 0.4), rgba(60, 30, 90, 0.7)),
+        url("https://img.freepik.com/foto-gratis/fondo-abstracto-color-lavanda_53876-104392.jpg")
+        center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(80, 40, 120, 0.4);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .content h1 {
+      font-size: 2.8rem;
+      color: #fff;
+    }
+
+    .content h2 {
+      font-size: 1.4rem;
+      margin-top: 10px;
+      color: #f8e9ff;
+    }
+
+    /* ===== BOTONES ===== */
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 12px 25px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+      color: #5a2b90;
+      transform: translateY(-3px);
+    }
+
+    /* ===== LOGOS ===== */
     .logos {
       position: absolute;
       top: 20px;
@@ -32,7 +111,7 @@
       transform: scale(1.08);
     }
 
-    /* ===== DATOS ACADÉMICOS ===== */
+    /* ===== BURBUJAS DE INFORMACIÓN ===== */
     .info-burbujas {
       position: absolute;
       bottom: 40px;
@@ -62,20 +141,61 @@
       background: rgba(255, 255, 255, 0.25);
     }
 
+    /* ===== PIE DE PÁGINA ===== */
+    footer {
+      background: #42275a;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== BOTÓN VOLVER ARRIBA ===== */
+    #btnArriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 12px;
+      background-color: #6f2dbd;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      display: none;
+      transition: all 0.3s ease;
+    }
+
+    #btnArriba:hover {
+      background-color: #a06cd5;
+      transform: translateY(-3px);
+    }
+
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content h2 {
+        font-size: 1rem;
+      }
+
       .logos img {
         width: 65px;
         height: 65px;
       }
 
-      .info-burbujas {
-        bottom: 25px;
-        gap: 10px;
-      }
-
       .burbuja {
         font-size: 0.8rem;
         padding: 8px 12px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
       }
     }
   </style>
@@ -83,27 +203,25 @@
 <body>
   <!-- 🌸 Encabezado principal -->
   <header class="hero">
-    <!-- 💜 Capa de tono lila translúcida -->
     <div class="overlay"></div>
 
-    <!-- 🔰 Insignias institucionales -->
+    <!-- 🔰 Logos institucionales -->
     <div class="logos">
-      <!-- 🏫 Universidad -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" title="Universidad Nacional del Altiplano">
-      <!-- 🎓 Facultad -->
       <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Facultad de Ingeniería" title="Facultad de Ingeniería">
     </div>
 
+    <!-- ✨ Título central -->
     <div class="content">
       <h1>Programación Numérica</h1>
       <h2>Portafolio de Nayelin Brisbany Cutipa Ramos</h2>
       <div class="buttons">
-        <a href="unidad1.html" class="btn">Unidad 1</a>
-        <a href="unidad2.html" class="btn">Unidad 2</a>
+        <a href="unidad1/index.html" class="btn">Unidad 1</a>
+        <a href="unidad2/index.html" class="btn">Unidad 2</a>
       </div>
     </div>
 
-    <!-- 📘 Información académica en burbujas -->
+    <!-- 📘 Datos académicos -->
     <div class="info-burbujas">
       <div class="burbuja">👩‍🏫 Docente: Ing. [Nombre del Docente]</div>
       <div class="burbuja">👩‍🎓 Alumna: Nayelin Brisbany Cutipa Ramos</div>
@@ -118,11 +236,23 @@
     <p>© 2025 Nayelin Brisbany Cutipa Ramos | Portafolio de Programación Numérica</p>
   </footer>
 
-  <!-- ⬆ Botón para volver arriba -->
+  <!-- ⬆ Botón volver arriba -->
   <button id="btnArriba" title="Volver arriba">⬆</button>
 
-  <!-- ⚙️ Script principal -->
+  <!-- ⚙️ Script -->
   <script src="js/main.js"></script>
+  <script>
+    // Mostrar/ocultar botón de volver arriba
+    const btnArriba = document.getElementById("btnArriba");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) btnArriba.style.display = "block";
+      else btnArriba.style.display = "none";
+    });
+    btnArriba.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
 </body>
 </html>
+
 
