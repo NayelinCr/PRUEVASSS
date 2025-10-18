@@ -5,26 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Unidad 1 · Actividad 00</title>
 
-  <!-- Estilos principales -->
-  <link rel="stylesheet" href="../css/main.css" />
-
-  <!-- Fuente bonita -->
+  <!-- Fuente moderna y bonita -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #fdfaf7;
-      color: #443e3e;
+      background: #faf6fc;
+      color: #3e2a42;
       margin: 0;
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(120deg, #b88b6a, #f0c8a8);
+      background: linear-gradient(120deg, #a27cbf, #d9b8f2);
       color: white;
-      padding: 1.5rem 0;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      padding: 1.8rem 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
       position: relative;
     }
 
@@ -38,6 +35,7 @@
       color: white;
       text-decoration: none;
       font-weight: 600;
+      font-size: 0.95rem;
     }
 
     .brand-link:hover {
@@ -46,8 +44,9 @@
 
     h1.brand {
       margin: 0.4rem 0 0;
-      font-size: 1.9rem;
+      font-size: 2rem;
       font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     p.subtitle {
@@ -56,20 +55,20 @@
       opacity: 0.9;
     }
 
-    /* Burbujita de estado */
+    /* Estado (burbuja) */
     .estado {
       position: absolute;
-      top: 1.2rem;
+      top: 1.3rem;
       right: 2rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
       font-weight: 600;
       background: white;
-      color: #6b4f3b;
-      padding: 0.4rem 0.8rem;
+      color: #6a4483;
+      padding: 0.4rem 0.9rem;
       border-radius: 50px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
 
     .burbuja {
@@ -81,11 +80,11 @@
     }
 
     .burbuja.completada {
-      background: #8bc34a;
+      background: #c792ea;
     }
 
     .burbuja.pendiente {
-      background: #ffb74d;
+      background: #f2c46d;
     }
 
     nav.mini-nav {
@@ -94,38 +93,40 @@
 
     nav.mini-nav a {
       background: white;
-      color: #7b4b33;
+      color: #6a4483;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
       font-weight: 600;
       transition: all 0.3s ease;
-      margin-right: 0.5rem;
+      margin-right: 0.6rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
     nav.mini-nav a:hover {
-      background: #7b4b33;
+      background: #6a4483;
       color: white;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
 
     main {
       background: white;
-      padding: 2rem;
+      padding: 2.2rem;
       margin: 2rem auto;
-      border-radius: 14px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 18px;
+      box-shadow: 0 6px 16px rgba(160, 120, 200, 0.15);
     }
 
     h2 {
-      color: #7b4b33;
-      border-bottom: 2px solid #d4b59e;
+      color: #6a4483;
+      border-bottom: 3px solid #d6b4f0;
       display: inline-block;
-      padding-bottom: 0.3rem;
-      margin-bottom: 0.8rem;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
     }
 
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
     }
 
     ul {
@@ -134,11 +135,11 @@
     }
 
     li {
-      margin: 0.5rem 0;
+      margin: 0.6rem 0;
     }
 
     a {
-      color: #a66b47;
+      color: #8e5ab7;
       text-decoration: none;
       font-weight: 500;
     }
@@ -147,24 +148,24 @@
       text-decoration: underline;
     }
 
-    /* Bloque de código bonito */
+    /* Bloque de código */
     pre {
-      background: #f7f3ef;
-      border-radius: 10px;
+      background: #f8f2fb;
+      border-radius: 12px;
       padding: 1rem;
       overflow-x: auto;
       font-family: 'Fira Code', monospace;
-      color: #3e2723;
-      border: 1px solid #e0d6cc;
+      color: #4b2c5e;
+      border: 1px solid #e6d3f5;
     }
 
     footer {
       text-align: center;
       padding: 1.2rem 0;
-      background: #f7eee6;
-      color: #5c4637;
+      background: #f2e4fa;
+      color: #5c3a6f;
       font-size: 0.9rem;
-      border-top: 1px solid #e3d3c4;
+      border-top: 1px solid #e6d3f5;
     }
   </style>
 </head>
@@ -181,7 +182,6 @@
         <a href="unidad1.html">Volver a Unidad 1</a>
       </nav>
 
-      <!-- 🔵 Burbuja de estado -->
       <div class="estado">
         <div class="burbuja completada"></div>
         <span>Completada</span>
@@ -207,7 +207,7 @@
       <h2>Código de ejemplo</h2>
       <pre><code># Ejemplo de código Python
 def ejemplo():
-    print("Hola Nayelin, esta es la Actividad 00 💖")
+    print("Hola Nayelin, esta es la Actividad 00 💜")
 
 ejemplo()
 </code></pre>
@@ -215,7 +215,8 @@ ejemplo()
   </main>
 
   <footer>
-    <p>© 2025 Nayelin · Portafolio Programación Numérica</p>
+    <p>© 2025 Nayelin · Portafolio Programación Numérica 💜</p>
   </footer>
 </body>
 </html>
+
