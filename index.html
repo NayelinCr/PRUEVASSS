@@ -14,11 +14,10 @@
       color: #fff;
       min-height: 100vh;
       position: relative;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-between;
-      overflow-x: hidden;
     }
 
     /* CAPA TRANSLÚCIDA LILA SOBRE TODO EL FONDO */
@@ -34,18 +33,22 @@
     header.hero {
       position: relative;
       text-align: center;
-      width: 100%;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem 3rem;
       z-index: 1;
     }
 
-    /* LOGOS A LOS LADOS DEL TÍTULO */
+    /* ===== LOGOS EN ESQUINAS ===== */
     .logos {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      right: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1000px;
-      margin: 0 auto 2rem;
+      padding: 0 3rem;
+      z-index: 2;
     }
 
     .logos img {
@@ -56,8 +59,8 @@
     }
 
     .logos img:hover {
-      transform: scale(1.05);
-      filter: brightness(1.1);
+      transform: scale(1.08);
+      filter: brightness(1.2);
     }
 
     .content h1 {
@@ -82,6 +85,7 @@
       justify-content: center;
       gap: 1.2rem;
       margin-bottom: 2.5rem;
+      z-index: 2;
     }
 
     .bubble {
@@ -105,16 +109,17 @@
       justify-content: center;
       gap: 2rem;
       flex-wrap: wrap;
+      z-index: 2;
     }
 
     .btn {
       background: linear-gradient(135deg, rgba(88, 70, 150, 0.95), rgba(139, 124, 255, 0.95));
       color: #fff;
       text-decoration: none;
-      padding: 1.2rem 2.8rem; /* 🔹 Más grandes */
-      border-radius: 2.8rem;
+      padding: 1.4rem 3.2rem; /* 🔹 Más grandes */
+      border-radius: 3rem;
       font-weight: 600;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       transition: all 0.3s ease;
       backdrop-filter: blur(4px);
       box-shadow: 0 0 25px rgba(139, 124, 255, 0.25);
@@ -164,7 +169,10 @@
 
   <header class="hero">
     <div class="logos">
+      <!-- 🔹 Logo Facultad (izquierda) -->
       <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Facultad">
+
+      <!-- 🔹 Logo Universidad (derecha) -->
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo Universidad">
     </div>
 
