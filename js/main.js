@@ -27,7 +27,7 @@ body {
   align-items: center;
   text-align: center;
   color: #fff;
-  background: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1350&q=80')
+  background: url('https://img.freepik.com/fotos-premium/espacio-trabajo-escritorio-femenino-tulipanes-teclado-lentes-agenda-clips-dorados-violeta_1429-5209.jpg?semt=ais_hybrid&w=740&q=80')
     center/cover no-repeat fixed;
 }
 
