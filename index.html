@@ -4,15 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portafolio – Programación Numérica – Nayelin</title>
-  <!-- Ruta correcta del CSS -->
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
+
   <style>
     /* ===== ESTILOS BASE ===== */
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
       color: #fff;
-      background-color: #f8f3f9;
+      background-color: #2a2037; /* lila muy oscuro */
       overflow-x: hidden;
     }
 
@@ -24,7 +29,7 @@
     .hero {
       position: relative;
       height: 100vh;
-      background: linear-gradient(rgba(100, 80, 150, 0.4), rgba(60, 30, 90, 0.7)),
+      background: linear-gradient(rgba(80,40,120,0.4), rgba(60,30,90,0.7)),
         url("https://img.freepik.com/foto-gratis/fondo-abstracto-color-lavanda_53876-104392.jpg")
         center/cover no-repeat;
       display: flex;
@@ -46,7 +51,7 @@
       position: relative;
       z-index: 2;
       padding: 20px;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
 
     .content h1 {
@@ -60,30 +65,54 @@
       color: #f8e9ff;
     }
 
-    /* ===== BOTONES DE UNIDADES ===== */
+    /* ===== Burbujas rectangulares de Unidades ===== */
     .buttons {
-      margin-top: 30px;
+      margin-top: 40px;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
-    .btn {
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      padding: 12px 25px;
-      border-radius: 30px;
+    .unidad-boton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background: linear-gradient(135deg, #7e57c2, #b388ff);
       color: #fff;
+      font-size: 1.3rem;
+      font-weight: 600;
       text-decoration: none;
-      font-weight: 500;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
       transition: all 0.3s ease;
-      backdrop-filter: blur(4px);
+      position: relative;
+      overflow: hidden;
     }
 
-    .btn:hover {
-      background-color: rgba(255, 255, 255, 0.4);
-      color: #5a2b90;
-      transform: translateY(-3px);
+    .unidad-boton::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: rgba(255,255,255,0.1);
+      transform: rotate(25deg);
+      transition: all 0.5s ease;
+    }
+
+    .unidad-boton:hover::before {
+      transform: rotate(25deg) translateX(10px) translateY(10px);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .unidad-boton:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+      background: linear-gradient(135deg, #9c75f3, #b388ff);
     }
 
     /* ===== LOGOS ===== */
@@ -129,9 +158,9 @@
       background: rgba(255, 255, 255, 0.15);
       border: 1px solid rgba(255,255,255,0.3);
       color: #fff;
-      padding: 10px 18px;
-      border-radius: 25px;
-      font-size: 0.95rem;
+      padding: 12px 22px;
+      border-radius: 20px;
+      font-size: 1rem;
       backdrop-filter: blur(6px);
       box-shadow: 0 3px 10px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, background 0.3s ease;
@@ -190,13 +219,19 @@
       }
 
       .burbuja {
-        font-size: 0.8rem;
-        padding: 8px 12px;
+        font-size: 0.85rem;
+        padding: 10px 18px;
       }
 
       .buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+      }
+
+      .unidad-boton {
+        width: 160px;
+        height: 90px;
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -218,10 +253,10 @@
       <h1>Programación Numérica</h1>
       <h2>Portafolio de Nayelin Brisbany Cutipa Ramos</h2>
 
-      <!-- Botones hacia las unidades -->
+      <!-- Burbujas rectangulares de unidades -->
       <div class="buttons">
-        <a href="unidad1/unidad1.html" class="btn">Unidad 1</a>
-        <a href="unidad2/unidad2.html" class="btn">Unidad 2</a>
+        <a href="unidad1/unidad1.html" class="unidad-boton">Unidad 1</a>
+        <a href="unidad2/unidad2.html" class="unidad-boton">Unidad 2</a>
       </div>
     </div>
 
@@ -257,6 +292,7 @@
   </script>
 </body>
 </html>
+
 
 
 
