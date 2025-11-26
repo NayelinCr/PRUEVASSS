@@ -18,8 +18,7 @@
       <ul class="nav-links">
         <li><a href="#hero">Inicio</a></li>
         <li><a href="#unidades">Unidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#info">Información</a></li>
       </ul>
     </div>
   </header>
@@ -27,30 +26,50 @@
   <!-- HERO PRINCIPAL -->
   <section id="hero" class="hero">
     <div class="overlay"></div>
+
+    <!-- LOGOS INSTITUCIONALES -->
+    <div class="hero-logos">
+      <a href="https://portal.unap.edu.pe/" target="_blank" title="Universidad Nacional del Altiplano">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo UNAP">
+      </a>
+      <a href="https://finesi.edu.pe/v1/" target="_blank" title="Facultad de Ingeniería Estadística e Informática">
+        <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Finesi">
+      </a>
+    </div>
+
     <div class="content">
-      <h2 style="font-size: 2.7rem; font-weight:700; margin-bottom:10px;">
+      <h2 style="font-size: 2.9rem; font-weight:700; margin-bottom:10px;">
         PORTAFOLIO DE PROGRAMACIÓN NUMÉRICA
       </h2>
       <p style="font-size:1.2rem; opacity:0.9;">
-        Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025
+        Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025-II
       </p>
 
       <div class="buttons" style="margin-top:30px;">
         <a class="btn" href="#unidades">📚 Ver Unidades</a>
-        <a class="btn" href="#proyectos">💻 Proyectos</a>
-        <a class="btn" href="#sobre">👤 Sobre mí</a>
+        <a class="btn" href="#info">📌 Información</a>
       </div>
+    </div>
+
+    <!-- BURBUJAS INFORMATIVAS -->
+    <div class="info-bubbles">
+      <span>👩‍🏫 Docente: Ing. Torres Cruz Fred</span>
+      <span>👩‍🎓 Alumna: Cutipa Ramos Nayelin Brisbany</span>
+      <span>📘 Curso: Programación Numérica</span>
+      <span>📅 Semestre: IV - 2025-II</span>
+      <a href="https://portal.unap.edu.pe/" target="_blank">🏛️ Universidad Nacional del Altiplano</a>
+      <a href="https://finesi.edu.pe/v1/" target="_blank">🏫 Facultad: Ingeniería Estadística e Informática</a>
     </div>
   </section>
 
-  <!-- SECCIÓN ¿QUÉ ES ESTE PORTAFOLIO? -->
-  <section class="menu fade-up" id="sobre" style="padding-top:120px;">
-    <h2>¿Qué encontrarás aquí?</h2>
-    <p style="max-width:750px; margin:0 auto; font-size:1.1rem;">
-      Este portafolio reúne el desarrollo completo de los temas, actividades y proyectos
-      trabajados durante el curso de <strong>Programación Numérica</strong>. Incluye código,
-      informes académicos, métodos iterativos, optimización, análisis de resultados y
-      aplicaciones reales desde la perspectiva de la Ingeniería Estadística e Informática.
+  <!-- SECCIÓN DE CONTENIDO PRINCIPAL -->
+  <section class="menu fade-up" id="info" style="padding-top:120px;">
+    <h2>Acerca de este Portafolio</h2>
+    <p style="max-width:750px; margin:0 auto; font-size:1.15rem;">
+      Este portafolio académico reúne el desarrollo completo de los métodos, algoritmos, prácticas
+      y análisis realizados en el curso de <strong>Programación Numérica</strong>. Su propósito es
+      demostrar la capacidad de aplicar técnicas computacionales en la resolución de problemas
+      matemáticos reales mediante C++ y Python.
     </p>
   </section>
 
@@ -60,17 +79,6 @@
     <ul>
       <li><a href="unidad1/unidad1.html">📦 Unidad 1 · Fundamentos de Programación Numérica</a></li>
       <li><a href="unidad2/unidad2.html">📦 Unidad 2 · Métodos Iterativos y Optimización</a></li>
-      <!-- Si agregas más unidades solo duplícalas -->
-    </ul>
-  </section>
-
-  <!-- SECCIÓN PROYECTOS -->
-  <section id="proyectos" class="menu fade-up">
-    <h2>Proyectos Destacados</h2>
-    <ul>
-      <li><a href="unidad1/unidad1_02.html">📊 Graficadora de Funciones</a></li>
-      <li><a href="unidad1/unidad1_05.html">⚙️ Método Newton-Raphson</a></li>
-      <li><a href="unidad2/unidad2_02.html">🔁 Gradiente Descendente</a></li>
     </ul>
   </section>
 
@@ -84,9 +92,7 @@
   <button id="btnTema"><span>☀️</span> Modo Oscuro</button>
 
   <script src="js/main.js"></script>
+
 </body>
 </html>
-
-
-
 
