@@ -367,3 +367,134 @@ section.visible, .card.visible, .proyecto.visible, .contenedor.visible {
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== INSIGNIAS DEL HERO ===== */
+.hero-logos {
+  position: absolute;
+  top: 22px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  z-index: 3;
+}
+
+.hero-logos img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.14);
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(179,136,255,0.45);
+  animation: glowPulse 3.2s ease-in-out infinite;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* HOVER PRO — SUTIL, SIN EXAGERAR */
+.hero-logos img:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 26px rgba(201,162,255,0.85);
+}
+
+/* EFECTO PULSANTE PREMIUM */
+@keyframes glowPulse {
+  0%   { box-shadow: 0 0 10px rgba(179,136,255,0.25); }
+  50%  { box-shadow: 0 0 22px rgba(179,136,255,0.75); }
+  100% { box-shadow: 0 0 10px rgba(179,136,255,0.25); }
+}
+/* ===== EFECTO DE ENTRADA SECUENCIAL PARA BOTONES ===== */
+.hero .btn {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: btnShow 1s ease forwards;
+}
+
+/* Botón 1 */
+.hero .btn:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+/* Botón 2 */
+.hero .btn:nth-child(2) {
+  animation-delay: 0.9s;
+}
+
+/* Botón 3 */
+.hero .btn:nth-child(3) {
+  animation-delay: 1.2s;
+}
+
+@keyframes btnShow {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+/* ===== SOBRE MÍ ===== */
+.sobre-mi {
+  display: flex;
+  justify-content: center;
+  padding: 120px 1rem;
+}
+
+.sobre-card {
+  max-width: 1050px;
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border-radius: 22px;
+  box-shadow: 0 10px 35px rgba(179,136,255,0.25);
+  display: flex;
+  gap: 40px;
+  padding: 3rem 3.5rem;
+  backdrop-filter: blur(8px);
+  align-items: center;
+  animation: fadeInUp 1s ease;
+}
+
+.sobre-foto img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #b388ff;
+  box-shadow: 0 0 20px rgba(179,136,255,0.55);
+  animation: glowPulse 3.2s infinite ease-in-out;
+}
+
+.sobre-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d5b4ff;
+  font-weight: 700;
+}
+
+.sobre-info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1rem;
+  color: #e9d4ff;
+}
+
+.sobre-datos {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.sobre-datos span {
+  background: rgba(61,43,86,0.8);
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  border-left: 3px solid #b388ff;
+}
+
+@media (max-width: 850px) {
+  .sobre-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-foto img {
+    margin-bottom: 15px;
+  }
+}
