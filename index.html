@@ -1,97 +1,110 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portafolio – Programación Numérica · Nayelin Cutipa</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio – Nayelin Cutipa</title>
   <link rel="stylesheet" href="css/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header>
-  <div class="navbar">
-    <h1 class="logo">🌸 Portafolio Numérico</h1>
-    <ul class="nav-links">
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="#info">Información</a></li>
-      <li><a href="#unidades">Unidades</a></li>
-      <li><a href="#sobre">Sobre mí</a></li>
-    </ul>
-  </div>
-</header>
+  <!-- ====== HEADER / NAVBAR ====== -->
+  <header id="header">
+    <nav class="navbar">
+      <h1 class="logo">Nayelin Cutipa</h1>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+        <li><a href="#menu">Unidades</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- HERO PRINCIPAL -->
-<section id="hero" class="hero">
-  <div class="overlay"></div>
+  <!-- ====== HERO PRINCIPAL ====== -->
+  <section id="hero" class="hero">
 
-  <!-- INSIGNIAS INSTITUCIONALES -->
-  <div class="hero-logos">
-    <a href="https://portal.unap.edu.pe/" target="_blank" title="Universidad Nacional del Altiplano">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo UNAP">
-    </a>
-    <a href="https://finesi.edu.pe/v1/" target="_blank" title="Facultad de Ingeniería Estadística e Informática">
-      <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Finesi">
-    </a>
-  </div>
-
-  <div class="content">
-    <h2 style="font-size: 2.8rem; font-weight:700;">
-      PORTAFOLIO DE PROGRAMACIÓN NUMÉRICA
-    </h2>
-    <p style="font-size:1.2rem; opacity:.9;">
-      Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025-II
-    </p>
-
-    <div class="buttons" style="margin-top:35px;">
-      <a class="btn" href="#info">ℹ️ Información General</a>
-      <a class="btn" href="#unidades">📚 Ver Unidades</a>
-      <a class="btn" href="#sobre">👤 Sobre mí</a>
+    <!-- INSIGNIAS UNIVERSITARIAS -->
+    <div class="hero-logos">
+      <img src="img/unsaac.png" alt="UNSAAC">
+      <img src="img/estadistica.png" alt="Ingeniería Estadística e Informática">
+      <img src="img/ccomp.png" alt="Programación Numérica">
     </div>
-  </div>
-</section>
 
-<!-- INFORMACIÓN GENERAL -->
-<section id="info" class="menu fade-up" style="padding-top:120px;">
-  <h2>Información del Curso</h2>
-  <div class="info-grid">
+    <div class="overlay"></div>
 
-    <div class="info-item">👩‍🏫 Docente <br><strong>Ing. Torres Cruz Fred</strong></div>
-    <div class="info-item">👩‍🎓 Alumna <br><strong>Nayelin Brisbany Cutipa Ramos</strong></div>
-    <div class="info-item">📘 Curso <br><strong>Programación Numérica</strong></div>
-    <div class="info-item">📅 Semestre <br><strong>IV – 2025-II</strong></div>
+    <div class="content fade-up">
+      <h2 style="font-size: 2.8rem; margin-bottom: 12px;">Portafolio de Programación Numérica</h2>
+      <p style="font-size: 1.1rem; opacity: 0.95;">
+        Bienvenid@ a mi espacio académico, donde documento y presento
+        los avances, trabajos y proyectos desarrollados durante esta
+        asignatura.
+      </p>
 
-    <a href="https://portal.unap.edu.pe/" target="_blank" class="info-item link">
-      🏛️ Universidad Nacional del Altiplano
-    </a>
+      <div class="buttons">
+        <a href="#sobre" class="btn">Sobre mí</a>
+        <a href="#menu" class="btn">Unidades</a>
+      </div>
+    </div>
+  </section>
 
-    <a href="https://finesi.edu.pe/v1/" target="_blank" class="info-item link">
-      🏫 Facultad de Ingeniería Estadística e Informática
-    </a>
-  </div>
-</section>
+  <!-- ====== SECCIÓN SOBRE MI ====== -->
+  <section id="sobre" class="sobre-mi">
+    <article class="sobre-card fade-up">
+      <div class="sobre-foto">
+        <!-- Cambia esta foto si deseas -->
+        <img src="img/yo.jpg" alt="Foto de Nayelin">
+      </div>
 
-<!-- UNIDADES -->
-<section id="unidades" class="menu fade-up">
-  <h2>Unidades Académicas</h2>
-  <ul>
-    <li><a href="unidad1/unidad1.html">📦 Unidad 1 · Fundamentos de Programación Numérica</a></li>
-    <li><a href="unidad2/unidad2.html">📦 Unidad 2 · Métodos Iterativos y Optimización</a></li>
-  </ul>
-</section>
+      <div class="sobre-info">
+        <h2>Sobre mí</h2>
+        <p>
+          ¡Hola! Soy <strong>Nayelin Brisbany Cutipa Ramos</strong>,
+          estudiante de <strong>Ingeniería Estadística e Informática</strong>.
+          Me apasiona la programación, el análisis de datos y el desarrollo
+          de soluciones tecnológicas que generen impacto real.
+        </p>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2025 Nayelin Brisbany Cutipa Ramos · Portafolio de Programación Numérica 💜</p>
-</footer>
+        <p>
+          Este portafolio tiene como propósito mostrar el proceso de aprendizaje
+          logrado en Programación Numérica, a través de prácticas, tareas y
+          proyectos implementados con enfoque científico, lógico y optimizado.
+        </p>
 
-<button id="btnArriba">⬆️</button>
-<button id="btnTema"><span>☀️</span> Modo Oscuro</button>
+        <div class="sobre-datos">
+          <span>💻 Programación Numérica</span>
+          <span>📊 Estadística Aplicada</span>
+          <span>🧠 Lógica Computacional</span>
+          <span>🎯 Aprendizaje constante</span>
+        </div>
+      </div>
+    </article>
+  </section>
 
-<script src="js/main.js"></script>
+  <!-- ====== MENÚ DE UNIDADES ====== -->
+  <section id="menu" class="menu fade-up">
+    <h2>Unidades del Curso</h2>
+    <ul>
+      <li><a href="unidad1/unidad1.html">Unidad I – Introducción a la Programación Numérica</a></li>
+      <li><a href="unidad2/unidad2.html">Unidad II – Métodos Numéricos</a></li>
+      <li><a href="unidad3/unidad3.html">Unidad III – Solución de Ecuaciones</a></li>
+      <li><a href="unidad4/unidad4.html">Unidad IV – Optimización y Análisis</a></li>
+    </ul>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>© 2025 – Nayelin Cutipa · Portafolio académico</p>
+  </footer>
+
+  <!-- ====== BOTONES FLOTANTES ====== -->
+  <button id="btnTema"><span>Cambiar tema</span></button>
+  <button id="btnArriba">↑</button>
+
+  <!-- ====== SCRIPTS ====== -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
+
 
