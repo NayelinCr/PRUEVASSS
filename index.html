@@ -1,295 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PORTAFOLIO – PROGRAMACION NUMERICA – NAYELIN CUTIPA</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio – Programación Numérica · Nayelin Cutipa</title>
 
-  <!-- CSS principal -->
   <link rel="stylesheet" href="css/main.css" />
-
-  <!-- Fuente moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Fira+Code&display=swap" rel="stylesheet">
-
-  <style>
-    /* ===== ESTILOS BASE ===== */
-    body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      color: #fff;
-      background-color: #2a2037; /* lila muy oscuro */
-      overflow-x: hidden;
-    }
-
-    h1, h2 {
-      margin: 0;
-    }
-
-    /* ===== SECCIÓN PRINCIPAL ===== */
-    .hero {
-      position: relative;
-      height: 100vh;
-      background: linear-gradient(rgba(80,40,120,0.4), rgba(60,30,90,0.7)),
-        url("https://img.freepik.com/foto-gratis/fondo-abstracto-color-lavanda_53876-104392.jpg")
-        center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(80, 40, 120, 0.4);
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-      padding: 20px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
-    .content h1 {
-      font-size: 2.8rem;
-      color: #fff;
-    }
-
-    .content h2 {
-      font-size: 1.4rem;
-      margin-top: 10px;
-      color: #f8e9ff;
-    }
-
-    /* ===== Burbujas rectangulares de Unidades ===== */
-    .buttons {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .unidad-boton {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 180px;
-      height: 100px;
-      background: linear-gradient(135deg, #7e57c2, #b388ff);
-      color: #fff;
-      font-size: 1.3rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .unidad-boton::before {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: rgba(255,255,255,0.1);
-      transform: rotate(25deg);
-      transition: all 0.5s ease;
-    }
-
-    .unidad-boton:hover::before {
-      transform: rotate(25deg) translateX(10px) translateY(10px);
-      background: rgba(255,255,255,0.15);
-    }
-
-    .unidad-boton:hover {
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.5);
-      background: linear-gradient(135deg, #9c75f3, #b388ff);
-    }
-
-    /* ===== LOGOS ===== */
-    .logos {
-      position: absolute;
-      top: 20px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 30px;
-      z-index: 3;
-    }
-
-    .logos img {
-      width: 85px;
-      height: 85px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 0 15px rgba(255,255,255,0.4);
-      background-color: rgba(255,255,255,0.3);
-      backdrop-filter: blur(4px);
-      transition: transform 0.3s ease;
-    }
-
-    .logos img:hover {
-      transform: scale(1.08);
-    }
-
-    /* ===== BURBUJAS DE INFORMACIÓN ===== */
-    .info-burbujas {
-      position: absolute;
-      bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      z-index: 3;
-    }
-
-    .burbuja {
-      background: rgba(255, 255, 255, 0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 20px;
-      font-size: 1rem;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-
-    .burbuja:hover {
-      transform: translateY(-3px);
-      background: rgba(255, 255, 255, 0.25);
-    }
-
-    /* ===== PIE DE PÁGINA ===== */
-    footer {
-      background: #42275a;
-      color: #fff;
-      text-align: center;
-      padding: 15px 0;
-      font-size: 0.9rem;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== BOTÓN VOLVER ARRIBA ===== */
-    #btnArriba {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 10px 12px;
-      background-color: #6f2dbd;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 18px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      display: none;
-      transition: all 0.3s ease;
-    }
-
-    #btnArriba:hover {
-      background-color: #a06cd5;
-      transform: translateY(-3px);
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      .content h1 {
-        font-size: 2rem;
-      }
-
-      .content h2 {
-        font-size: 1rem;
-      }
-
-      .logos img {
-        width: 65px;
-        height: 65px;
-      }
-
-      .burbuja {
-        font-size: 0.85rem;
-        padding: 10px 18px;
-      }
-
-      .buttons {
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .unidad-boton {
-        width: 160px;
-        height: 90px;
-        font-size: 1.1rem;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- 🌸 Encabezado principal -->
-  <header class="hero">
-    <div class="overlay"></div>
 
-    <!-- 🔰 Logos institucionales -->
-    <div class="logos">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" title="Universidad Nacional del Altiplano">
-      <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Facultad de Ingeniería" title="Facultad de Ingeniería">
-    </div>
-
-    <!-- ✨ Título central -->
-    <div class="content">
-      <h1>PROGRAMACION NUMERICA</h1>
-      <h2>PORTAFOLIO DE : NAYELIN BRISBANY CUTTPA RAMOS</h2>
-
-      <!-- Burbujas rectangulares de unidades -->
-      <div class="buttons">
-        <a href="unidad1/unidad1.html" class="unidad-boton">UNIDAD 1</a>
-        <a href="unidad2/unidad2.html" class="unidad-boton">UNIDAD 2</a>
-      </div>
-    </div>
-
-    <!-- 📘 Información académica -->
-    <div class="info-burbujas">
-      <div class="burbuja">👩‍🏫 Docente: Ing. TORRES CRUZ FRED</div>
-      <div class="burbuja">👩‍🎓 Alumna: CUTIPA RAMOS NAYELIN BRISBANY</div>
-      <div class="burbuja">📘 Curso: PROGRAMACION NUMERICA</div>
-      <div class="burbuja">📅 Semestre: IV - 2025-II</div>
-      <div class="burbuja">🏛️ UNIVERSIDAD NACIONAL DEL ALTIPLANO-PUNO</div>
+  <!-- NAVBAR -->
+  <header>
+    <div class="navbar">
+      <h1 class="logo">🌸 Portafolio Numérico</h1>
+      <ul class="nav-links">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#unidades">Unidades</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre">Sobre mí</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- 🪷 Pie de página -->
+  <!-- HERO PRINCIPAL -->
+  <section id="hero" class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h2 style="font-size: 2.7rem; font-weight:700; margin-bottom:10px;">
+        PORTAFOLIO DE PROGRAMACIÓN NUMÉRICA
+      </h2>
+      <p style="font-size:1.2rem; opacity:0.9;">
+        Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025
+      </p>
+
+      <div class="buttons" style="margin-top:30px;">
+        <a class="btn" href="#unidades">📚 Ver Unidades</a>
+        <a class="btn" href="#proyectos">💻 Proyectos</a>
+        <a class="btn" href="#sobre">👤 Sobre mí</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN ¿QUÉ ES ESTE PORTAFOLIO? -->
+  <section class="menu fade-up" id="sobre" style="padding-top:120px;">
+    <h2>¿Qué encontrarás aquí?</h2>
+    <p style="max-width:750px; margin:0 auto; font-size:1.1rem;">
+      Este portafolio reúne el desarrollo completo de los temas, actividades y proyectos
+      trabajados durante el curso de <strong>Programación Numérica</strong>. Incluye código,
+      informes académicos, métodos iterativos, optimización, análisis de resultados y
+      aplicaciones reales desde la perspectiva de la Ingeniería Estadística e Informática.
+    </p>
+  </section>
+
+  <!-- SECCIÓN DE UNIDADES EN TARJETAS -->
+  <section id="unidades" class="menu fade-up">
+    <h2>Unidades Académicas</h2>
+    <ul>
+      <li><a href="unidad1/unidad1.html">📦 Unidad 1 · Fundamentos de Programación Numérica</a></li>
+      <li><a href="unidad2/unidad2.html">📦 Unidad 2 · Métodos Iterativos y Optimización</a></li>
+      <!-- Si agregas más unidades solo duplícalas -->
+    </ul>
+  </section>
+
+  <!-- SECCIÓN PROYECTOS -->
+  <section id="proyectos" class="menu fade-up">
+    <h2>Proyectos Destacados</h2>
+    <ul>
+      <li><a href="unidad1/unidad1_02.html">📊 Graficadora de Funciones</a></li>
+      <li><a href="unidad1/unidad1_05.html">⚙️ Método Newton-Raphson</a></li>
+      <li><a href="unidad2/unidad2_02.html">🔁 Gradiente Descendente</a></li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 NAYELIN BRISBANY CUTIPA RAMOS| PORTAFOLIO PROGRAMCION NUMERICA</p>
+    <p>© 2025 Nayelin Brisbany Cutipa Ramos · Portafolio de Programación Numérica 💜</p>
   </footer>
 
-  <!-- ⬆ Botón volver arriba -->
-  <button id="btnArriba" title="Volver arriba">⬆</button>
+  <!-- BOTONES FLOTANTES -->
+  <button id="btnArriba">⬆️</button>
+  <button id="btnTema"><span>☀️</span> Modo Oscuro</button>
 
-  <!-- ⚙️ Script principal -->
   <script src="js/main.js"></script>
-  <script>
-    // Mostrar/ocultar botón de volver arriba
-    const btnArriba = document.getElementById("btnArriba");
-    window.addEventListener("scroll", () => {
-      btnArriba.style.display = window.scrollY > 200 ? "block" : "none";
-    });
-    btnArriba.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
 </body>
 </html>
 
