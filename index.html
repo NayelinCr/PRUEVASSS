@@ -11,88 +11,87 @@
 
 <body>
 
-  <!-- NAVBAR -->
-  <header>
-    <div class="navbar">
-      <h1 class="logo">🌸 Portafolio Numérico</h1>
-      <ul class="nav-links">
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#unidades">Unidades</a></li>
-        <li><a href="#info">Información</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- HERO PRINCIPAL -->
-  <section id="hero" class="hero">
-    <div class="overlay"></div>
-
-    <!-- LOGOS INSTITUCIONALES -->
-    <div class="hero-logos">
-      <a href="https://portal.unap.edu.pe/" target="_blank" title="Universidad Nacional del Altiplano">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo UNAP">
-      </a>
-      <a href="https://finesi.edu.pe/v1/" target="_blank" title="Facultad de Ingeniería Estadística e Informática">
-        <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Finesi">
-      </a>
-    </div>
-
-    <div class="content">
-      <h2 style="font-size: 2.9rem; font-weight:700; margin-bottom:10px;">
-        PORTAFOLIO DE PROGRAMACIÓN NUMÉRICA
-      </h2>
-      <p style="font-size:1.2rem; opacity:0.9;">
-        Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025-II
-      </p>
-
-      <div class="buttons" style="margin-top:30px;">
-        <a class="btn" href="#unidades">📚 Ver Unidades</a>
-        <a class="btn" href="#info">📌 Información</a>
-      </div>
-    </div>
-
-    <!-- BURBUJAS INFORMATIVAS -->
-    <div class="info-bubbles">
-      <span>👩‍🏫 Docente: Ing. Torres Cruz Fred</span>
-      <span>👩‍🎓 Alumna: Cutipa Ramos Nayelin Brisbany</span>
-      <span>📘 Curso: Programación Numérica</span>
-      <span>📅 Semestre: IV - 2025-II</span>
-      <a href="https://portal.unap.edu.pe/" target="_blank">🏛️ Universidad Nacional del Altiplano</a>
-      <a href="https://finesi.edu.pe/v1/" target="_blank">🏫 Facultad: Ingeniería Estadística e Informática</a>
-    </div>
-  </section>
-
-  <!-- SECCIÓN DE CONTENIDO PRINCIPAL -->
-  <section class="menu fade-up" id="info" style="padding-top:120px;">
-    <h2>Acerca de este Portafolio</h2>
-    <p style="max-width:750px; margin:0 auto; font-size:1.15rem;">
-      Este portafolio académico reúne el desarrollo completo de los métodos, algoritmos, prácticas
-      y análisis realizados en el curso de <strong>Programación Numérica</strong>. Su propósito es
-      demostrar la capacidad de aplicar técnicas computacionales en la resolución de problemas
-      matemáticos reales mediante C++ y Python.
-    </p>
-  </section>
-
-  <!-- SECCIÓN DE UNIDADES EN TARJETAS -->
-  <section id="unidades" class="menu fade-up">
-    <h2>Unidades Académicas</h2>
-    <ul>
-      <li><a href="unidad1/unidad1.html">📦 Unidad 1 · Fundamentos de Programación Numérica</a></li>
-      <li><a href="unidad2/unidad2.html">📦 Unidad 2 · Métodos Iterativos y Optimización</a></li>
+<!-- NAVBAR -->
+<header>
+  <div class="navbar">
+    <h1 class="logo">🌸 Portafolio Numérico</h1>
+    <ul class="nav-links">
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#info">Información</a></li>
+      <li><a href="#unidades">Unidades</a></li>
+      <li><a href="#sobre">Sobre mí</a></li>
     </ul>
-  </section>
+  </div>
+</header>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Nayelin Brisbany Cutipa Ramos · Portafolio de Programación Numérica 💜</p>
-  </footer>
+<!-- HERO PRINCIPAL -->
+<section id="hero" class="hero">
+  <div class="overlay"></div>
 
-  <!-- BOTONES FLOTANTES -->
-  <button id="btnArriba">⬆️</button>
-  <button id="btnTema"><span>☀️</span> Modo Oscuro</button>
+  <!-- INSIGNIAS INSTITUCIONALES -->
+  <div class="hero-logos">
+    <a href="https://portal.unap.edu.pe/" target="_blank" title="Universidad Nacional del Altiplano">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Logo_UNAP.png/250px-Logo_UNAP.png" alt="Logo UNAP">
+    </a>
+    <a href="https://finesi.edu.pe/v1/" target="_blank" title="Facultad de Ingeniería Estadística e Informática">
+      <img src="https://www.odinlaboratory.com/frontend/images/FinesiLogo.png" alt="Logo Finesi">
+    </a>
+  </div>
 
-  <script src="js/main.js"></script>
+  <div class="content">
+    <h2 style="font-size: 2.8rem; font-weight:700;">
+      PORTAFOLIO DE PROGRAMACIÓN NUMÉRICA
+    </h2>
+    <p style="font-size:1.2rem; opacity:.9;">
+      Universidad Nacional del Altiplano · Ingeniería Estadística e Informática · 2025-II
+    </p>
 
+    <div class="buttons" style="margin-top:35px;">
+      <a class="btn" href="#info">ℹ️ Información General</a>
+      <a class="btn" href="#unidades">📚 Ver Unidades</a>
+      <a class="btn" href="#sobre">👤 Sobre mí</a>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMACIÓN GENERAL -->
+<section id="info" class="menu fade-up" style="padding-top:120px;">
+  <h2>Información del Curso</h2>
+  <div class="info-grid">
+
+    <div class="info-item">👩‍🏫 Docente <br><strong>Ing. Torres Cruz Fred</strong></div>
+    <div class="info-item">👩‍🎓 Alumna <br><strong>Nayelin Brisbany Cutipa Ramos</strong></div>
+    <div class="info-item">📘 Curso <br><strong>Programación Numérica</strong></div>
+    <div class="info-item">📅 Semestre <br><strong>IV – 2025-II</strong></div>
+
+    <a href="https://portal.unap.edu.pe/" target="_blank" class="info-item link">
+      🏛️ Universidad Nacional del Altiplano
+    </a>
+
+    <a href="https://finesi.edu.pe/v1/" target="_blank" class="info-item link">
+      🏫 Facultad de Ingeniería Estadística e Informática
+    </a>
+  </div>
+</section>
+
+<!-- UNIDADES -->
+<section id="unidades" class="menu fade-up">
+  <h2>Unidades Académicas</h2>
+  <ul>
+    <li><a href="unidad1/unidad1.html">📦 Unidad 1 · Fundamentos de Programación Numérica</a></li>
+    <li><a href="unidad2/unidad2.html">📦 Unidad 2 · Métodos Iterativos y Optimización</a></li>
+  </ul>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Nayelin Brisbany Cutipa Ramos · Portafolio de Programación Numérica 💜</p>
+</footer>
+
+<button id="btnArriba">⬆️</button>
+<button id="btnTema"><span>☀️</span> Modo Oscuro</button>
+
+<script src="js/main.js"></script>
 </body>
 </html>
 
